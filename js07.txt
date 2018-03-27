@@ -1,0 +1,49 @@
+var students = [
+    {name: 'Remy', cohort: 'Jan'},
+    {name: 'Genevieve', cohort: 'March'},
+    {name: 'Chuck', cohort: 'Jan'},
+    {name: 'Osmund', cohort: 'June'},
+    {name: 'Nikki', cohort: 'June'},
+    {name: 'Boris', cohort: 'June'}
+]
+function showStudents(std){
+
+  for(var i=0;i<std.length;i++){
+    var string=''
+    for(var key in std[i]){
+      string+=key+':'+std[i][key]+',';
+    }
+    console.log(string);
+  }
+}
+
+showStudents(students)
+
+
+
+let users = {
+    employees: [
+        {'first_name':  'Miguel', 'last_name' : 'Jones'},
+        {'first_name' : 'Ernie', 'last_name' : 'Bertson'},
+        {'first_name' : 'Nora', 'last_name' : 'Lu'},
+        {'first_name' : 'Sally', 'last_name' : 'Barkyoumb'}
+    ],
+    managers: [
+       {'first_name' : 'Lillian', 'last_name' : 'Chambers'},
+       {'first_name' : 'Gordon', 'last_name' : 'Poe'}
+    ]
+ };
+
+
+function showUsers(users){
+    for(let type in users){
+      console.log(type.toUpperCase());
+      for(let i=0;i<users[type].length;i++){
+          lname=users[type][i].last_name;
+          fname=users[type][i].first_name;
+          console.log(i+1+'-'+lname+','+fname+'-'+(lname.length+fname.length))
+      }
+    }
+}
+
+showUsers(users)

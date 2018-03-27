@@ -1,0 +1,43 @@
+function zero_negativity(arr){
+  for(let i=0;i<arr.length;i++){
+    if(arr[i]<0){
+      return false;
+    }
+  }
+  return true;
+}
+console.log(zero_negativity([1,-2]));
+
+function is_even(num){
+  if(num%2==0){
+    return true;
+  }else{
+    return false;
+  }
+}
+
+function how_many_even(arr){
+  var count=0
+  for(let i=0;i<arr.length;i++){
+    if(is_even(arr[i])){
+      count++;
+    }
+  }
+  return count;
+}
+
+function create_dummy_array(n){
+  var arr=[];
+  for(let i=0;i<n;i++){
+    arr.push(Math.floor(Math.random()*10))
+  }
+  return arr;
+}
+
+function random_choice(arr){
+  var newarr=[];
+  for(let i=0;i<arr.length;i++){
+    newarr.push(Math.random());
+  }
+  return newarr;
+}

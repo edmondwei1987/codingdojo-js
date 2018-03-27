@@ -1,0 +1,25 @@
+function starString(n){
+  var star='';
+  if(n.constructor===Number){
+    for(let i=0;i<n;i++){
+      star+='*';
+    }
+  }else{
+    for(let i=0;i<n.length;i++){
+      star+=n.charAt(0).toLowerCase();
+    }
+  }
+
+  return star;
+}
+
+function drawStars(arr){
+  stars=[];
+  for(let i=0;i<arr.length;i++){
+    stars.push(starString(arr[i]))
+  }
+  return stars;
+}
+
+
+console.log(drawStars([1,'Tom',3]))
